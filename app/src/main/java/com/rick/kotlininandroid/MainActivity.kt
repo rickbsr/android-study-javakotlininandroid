@@ -3,6 +3,8 @@ package com.rick.kotlininandroid
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.rick.kotlininandroid.activity.JavaActivity
+import com.rick.kotlininandroid.activity.KotlinActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun transActivity(intent: Intent) {
+    private fun transActivity(intent: Intent) {
         var args = Bundle()
         args.putString(ARGS_LANG, "Test")
         intent.putExtra(INTENT_KEY, args)
