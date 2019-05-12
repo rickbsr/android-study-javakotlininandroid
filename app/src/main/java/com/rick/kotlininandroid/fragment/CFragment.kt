@@ -16,7 +16,7 @@ class CFragment : ReportFragment() {
         return view
     }
 
-// Singleton by Kotlin
+// 第六點：Kotlin 版本，Singleton by Kotlin
 companion object {
     val instance = CFragment()
 }

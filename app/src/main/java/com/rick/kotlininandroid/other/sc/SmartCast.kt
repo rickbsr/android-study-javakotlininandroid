@@ -1,6 +1,6 @@
 package com.rick.kotlininandroid.other.sc
 
-// Type Check and Smart Cast
+// // 第六點：Kotlin 版本，Type Check and Smart Cast
 fun test(obj: Any) {
     if (obj is String) obj.split("")
 }

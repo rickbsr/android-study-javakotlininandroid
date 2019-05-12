@@ -59,10 +59,11 @@ class KotlinActivity : AppCompatActivity() {
             println("text Changed")
         }
 
-        // Null Safety
-        val str: String? = intent.getBundleExtra(MainActivity.INTENT_KEY)?.getString(
-            MainActivity.ARGS_LANG
-        )
+        // 第一點：Kotlin 版本，可以直接呼叫
+        textView.text = "Hello, Kotlin!"
+
+        // 第二點：Kotlin 版本，藉由 Null Safety 的機制，讓程式碼變得非常簡潔
+        val str: String? = intent.getBundleExtra(MainActivity.INTENT_KEY)?.getString(MainActivity.ARGS_LANG)
         println(str)
 
         val data = MyData(str ?: "unKnown")
@@ -71,8 +72,10 @@ class KotlinActivity : AppCompatActivity() {
         transFragmentPage()
     }
 
+    // 第三點：Kotlin 版本，值物件
     data class MyData(val str: String)
 
+    // 第四點：Kotlin 版本，多載
     fun doThings(
         content: String,
         time: Long = System.currentTimeMillis(),

@@ -79,18 +79,18 @@ public class JavaActivity extends AppCompatActivity {
 //            }
 //        });
 
-EditTextUtil.setOnTextChangeListener(editText, new EditTextUtil.OnChangedListener() {
-    @Override
-    public void onChanged(String text) {
-        System.out.println("text Changed");
-    }
-});
+        EditTextUtil.setOnTextChangeListener(editText, new EditTextUtil.OnChangedListener() {
+            @Override
+            public void onChanged(String text) {
+                System.out.println("text Changed");
+            }
+        });
 
-
-        // findViewById
+        // 第一點：Java 版本，要使用 findViewById()
         TextView textView = (TextView) findViewById(R.id.textView);
+        textView.setText("Hello, Java!");
 
-        // Java 沒有 Null Safety 機制
+        // 第一點：Java 版本，沒有 Null Safety 機制，只能依靠判斷式
         Bundle args = getIntent().getBundleExtra(MainActivity.INTENT_KEY);
         if (args != null) {
             String str = args.getString(MainActivity.ARGS_LANG);
@@ -101,7 +101,9 @@ EditTextUtil.setOnTextChangeListener(editText, new EditTextUtil.OnChangedListene
         }
     }
 
+    // 第三點：Java 版本，值物件
     class MyData {
+
         private String str;
 
         public MyData(String str) {
@@ -124,6 +126,7 @@ EditTextUtil.setOnTextChangeListener(editText, new EditTextUtil.OnChangedListene
         }
     }
 
+    // 第四點：Java 版本，多載
     private void doThings(String content, long time, String tag) {
         // code...
     }

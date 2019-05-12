@@ -20,7 +20,7 @@ public class AFragment extends Fragment {
         return view;
     }
 
-// Singleton by Java
+// 第六點：Java 版本，Singleton by Java
 private static Fragment instance;
 
 public static Fragment getInstance() {
